@@ -6,6 +6,39 @@ Designed and simulated a custom 16-bit CPU to explore computer architecture fund
 ## Project Status
 This project is currently in active development. The instruction set architecture and high-level datapath design have been defined, and implementation of core components such as the ALU, register file, and control unit is ongoing in Logisim Evolution. This repository will be updated as additional components are completed and tested.
 
+## Progress
+
+### Design
+- [x] Define project goals and motivation
+- [x] Outline high-level CPU architecture
+- [x] Decide on instruction width (16-bit)
+- [ ] Define register count and layout (R0–R7)
+- [ ] Lock instruction formats (R-type / I-type)
+- [ ] Assign opcode bit patterns for each instruction
+
+### Implementation
+- [ ] Build Register File subcircuit
+- [ ] Build ALU subcircuit
+- [ ] Build Program Counter
+- [ ] Build Instruction Memory
+- [ ] Build Data Memory
+- [ ] Design and implement Control Unit
+- [ ] Integrate full datapath (single-cycle CPU)
+
+### Testing
+- [ ] Write test programs for arithmetic operations
+- [ ] Write test programs for memory operations (LOAD / STORE)
+- [ ] Write test programs for control flow (BEQ / JMP)
+- [ ] Verify correctness in simulation
+- [ ] Debug edge cases and control signal issues
+
+### Documentation & Reflection
+- [x] Write initial README with design overview
+- [ ] Update README with ISA specifications
+- [ ] Add diagrams (datapath, ALU, register file)
+- [ ] Add screenshots of Logisim simulation
+- [ ] Write analysis and reflection of challenges and design choices
+
 ## Overview
 This project documents the design and simulation of a custom 16-bit CPU to understand how instructions are executed on a hardware level. The CPU will be implemented in Logisim Evolution and will support a basic instruction set for arithmetic, memory access, and control flow.
 
