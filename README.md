@@ -19,16 +19,16 @@ The CPU will consist of several core components, including an ALU, register file
 The CPU will use a custom 16-bit instruction set designed to support basic arithmetic, memory access, and control flow. Instructions will be divided into R-type and I-type formats, allowing operations between registers as well as immediate values and memory addresses.
 
 ### Instruction Table
-Instruction |   Type    | Description
-ADD         |  R-type |   Adds two registers and stores the result in a destination register
 
-SUB         |  R-type |   Subtracts one register from another
-AND         |  R-type |   Performs bitwise AND on two registers
-OR          |  R-type |   Performs bitwise OR on two registers
-LOAD        |  I-type |   Loads a value from memory into a register
-STORE       |  I-type |   Stores a register value into memory
-BEQ         |  I-type |   Branches if two registers are equal
-JMP         |  I-type |   Jumps to a specified instruction address
+#### Instruction |   Type    | Description
+##### ADD         |  R-type |   Adds two registers and stores the result in a destination register
+##### SUB         |  R-type |   Subtracts one register from another
+##### AND         |  R-type |   Performs bitwise AND on two registers
+##### OR          |  R-type |   Performs bitwise OR on two registers
+##### LOAD        |  I-type |   Loads a value from memory into a register
+##### STORE       |  I-type |   Stores a register value into memory
+##### BEQ         |  I-type |   Branches if two registers are equal
+##### JMP         |  I-type |   Jumps to a specified instruction address
 
 ### Design Rationale
 This instruction set is intentionally kept small to simplify control logic while still supporting programs such as loops and conditional branches. Separating instructions into R-type and I-type formats will reduce decoding complexity and will make the CPU easier to extend in future iterations.
