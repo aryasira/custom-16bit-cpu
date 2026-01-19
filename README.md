@@ -20,7 +20,6 @@ The CPU will use a custom 16-bit instruction set designed to support basic arith
 
 ### Instruction Table
 Instruction |   Type    | Description
------------  -----------  ------------
 ADD         |  R-type |   Adds two registers and stores the result in a destination register
 SUB         |  R-type |   Subtracts one register from another
 AND         |  R-type |   Performs bitwise AND on two registers
