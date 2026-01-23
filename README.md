@@ -17,13 +17,23 @@ This project is currently in active development. The instruction set architectur
 - [ ] Assign opcode bit patterns for each instruction
 
 ### Implementation
-- [ ] Build Register File subcircuit
+- [x] Build Register File subcircuit
 - [ ] Build ALU subcircuit
 - [ ] Build Program Counter
 - [ ] Build Instruction Memory
 - [ ] Build Data Memory
 - [ ] Design and implement Control Unit
 - [ ] Integrate full datapath (single-cycle CPU)
+
+## Register File
+
+- 8 registers, 16 bits each
+- Dual read ports (rs, rt)
+- Single write port (rd, write_data)
+- Synchronous clock (clk)
+- Tested using manual sanity checks in Logisim
+
+![Register File Diagram](docs/Register_File_diagram.png)
 
 ### Testing
 - [ ] Write test programs for arithmetic operations
@@ -53,15 +63,16 @@ The CPU will use a custom 16-bit instruction set designed to support basic arith
 
 ### Instruction Table
 
-#### Instruction |   Type    | Description
-##### ADD         |  R-type |   Adds two registers and stores the result in a destination register
-##### SUB         |  R-type |   Subtracts one register from another
-##### AND         |  R-type |   Performs bitwise AND on two registers
-##### OR          |  R-type |   Performs bitwise OR on two registers
-##### LOAD        |  I-type |   Loads a value from memory into a register
-##### STORE       |  I-type |   Stores a register value into memory
-##### BEQ         |  I-type |   Branches if two registers are equal
-##### JMP         |  I-type |   Jumps to a specified instruction address
+| Instruction | Type   | Description |
+|------------|--------|-------------|
+| ADD  | R-type | Adds two registers |
+| SUB  | R-type | Subtracts registers |
+| AND  | R-type | Bitwise AND |
+| OR   | R-type | Bitwise OR |
+| LOAD | I-type | Load from memory |
+| STORE| I-type | Store to memory |
+| BEQ  | I-type | Branch if equal |
+| JMP  | I-type | Jump |
 
 ### Design Rationale
 This instruction set is intentionally kept small to simplify control logic while still supporting programs such as loops and conditional branches. Separating instructions into R-type and I-type formats will reduce decoding complexity and will make the CPU easier to extend in future iterations.
