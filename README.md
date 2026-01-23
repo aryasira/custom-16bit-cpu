@@ -33,7 +33,7 @@ This project is currently in active development. The instruction set architectur
 - Synchronous clock (clk)
 - Tested using manual sanity checks in Logisim
 
-<img src="docs/register_file_diagram.png" width="550">
+[View Register File Diagram](docs/register_file_diagram.png)
 
 ### Testing
 - [ ] Write test programs for arithmetic operations
